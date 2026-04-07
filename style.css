@@ -1,29 +1,17 @@
-html {
-    scroll-behavior: smooth;
+body {
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.fade-in-up {
+.reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 1s, transform 1s;
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
-.fade-in-left {
-    opacity: 0;
-    transform: translateX(-40px);
-    transition: opacity 1s, transform 1s;
-}
-
-.fade-in-right {
-    opacity: 0;
-    transform: translateX(40px);
-    transition: opacity 1s, transform 1s;
-}
-
-.is-visible {
+.reveal.active {
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
 }
 
 ::-webkit-scrollbar {
@@ -31,10 +19,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f5f9;
+    background: #f1f1f1; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #00A8CC;
-    border-radius: 10px;
+    background: #c1c1c1; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8; 
 }
